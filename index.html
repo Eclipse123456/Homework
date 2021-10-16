@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <script src="style.js"></script>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <script>
+        var today = new Date();
+        var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        var date2 = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+        document.getElementById("p1").innerHTML = date;
+        document.getElementById("p2").innerHTML = date2;
+    </script>
+
+</body>
+
+</html>
