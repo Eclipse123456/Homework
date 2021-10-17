@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework</title>
+
+    <script>
+        function reverseText() {
+        var forward = document.getElementById("numb").value;
+        var backward = forward.split("").reverse().join("");
+        document.getElementById("demo").innerHTML = backward;
+    }
+
+        document.getElementById("btnsubmit").addEventListener("click", reverseText);
+    </script>
+
 </head>
 <body>
-    
+    <p >Spell a sentence backwards.</p>
+    <input id="numb">
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="demo"></p>
 </body>
 </html>
