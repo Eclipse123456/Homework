@@ -5,20 +5,20 @@
     <title>Homework</title>
 
     <script>
-        function reverseText() {
-        var forward = document.getElementById("numb").value;
-        var backward = forward.split("").reverse().join("");
-        document.getElementById("demo").innerHTML = backward;
-    }
 
-        document.getElementById("btnsubmit").addEventListener("click", reverseText);
+        function rotateRight() {
+                input = document.myForm.word.value;
+                newstr = input.charAt(input.length - 1) + input.substring(0, input.length - 1);
+                document.getElementById("word").value = newstr;
+        }
     </script>
 
 </head>
 <body>
-    <p >Spell a sentence backwards.</p>
-    <input id="numb">
-    <button type="button" onclick="myFunction()">Submit</button>
-    <p id="demo"></p>
+    <form id="myForm" name="myForm">
+        <label >Enter a word to be rotated:</label><br>
+        <input type="text" id="word" name="word" class="inp_text" size="50">
+        <input type="button" class="button" value="Rotate" onClick="rotateRight()">
+    </form>
 </body>
 </html>
